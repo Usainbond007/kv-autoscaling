@@ -1,0 +1,26 @@
+apiVersion: batch/v1
+kind: Job
+metadata:
+  name: locust-autoscale
+spec:
+  backoffLimit: 0
+  template:
+    spec:
+      restartPolicy: Never
+      containers:
+        - name: locust
+          image: locustio/locust:2.46.0
+          args:
+            - -f
+            - /mnt/locust/autoscale_stress.py
+            - --headless
+            - --host
+            - http://vllm.default.svc.cluster.local:8000
+          volumeMounts:
+            - name: script
+              mountPath: /mnt/locust
+              readOnly: true
+      volumes:
+        - name: script
+          configMap:
+            name: locust-autoscale-script

@@ -1,0 +1,32 @@
+apiVersion: batch/v1
+kind: Job
+metadata:
+  name: locust-smoke
+spec:
+  backoffLimit: 0
+  template:
+    spec:
+      restartPolicy: Never
+      containers:
+        - name: locust
+          image: locustio/locust:2.46.0
+          args:
+            - -f
+            - /mnt/locust/locustfile.py
+            - --headless
+            - --host
+            - http://vllm.default.svc.cluster.local:8000
+            - --users
+            - "2"
+            - --spawn-rate
+            - "1"
+            - --run-time
+            - 1m
+          volumeMounts:
+            - name: script
+              mountPath: /mnt/locust
+              readOnly: true
+      volumes:
+        - name: script
+          configMap:
+            name: locust-script
