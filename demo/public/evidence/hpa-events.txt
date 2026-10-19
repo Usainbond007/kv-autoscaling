@@ -1,0 +1,38 @@
+Name:                                                  vllm-cpu
+Namespace:                                             default
+Labels:                                                <none>
+Annotations:                                           <none>
+CreationTimestamp:                                     Mon, 19 Oct 2026 10:54:43 +0000
+Reference:                                             Deployment/vllm
+Metrics:                                               ( current / target )
+  resource cpu on pods  (as a percentage of request):  32% (32m) / 70%
+Min replicas:                                          1
+Max replicas:                                          2
+Behavior:
+  Scale Up:
+    Stabilization Window: 0 seconds
+    Select Policy: Max
+    Policies:
+      - Type: Pods     Value: 4    Period: 15 seconds
+      - Type: Percent  Value: 100  Period: 15 seconds
+  Scale Down:
+    Stabilization Window: 120 seconds
+    Select Policy: Max
+    Policies:
+      - Type: Percent  Value: 100  Period: 15 seconds
+Deployment pods:       2 current / 1 desired
+Conditions:
+  Type            Status  Reason              Message
+  ----            ------  ------              -------
+  AbleToScale     True    SucceededRescale    the HPA controller was able to update the target scale to 1
+  ScalingActive   True    ValidMetricFound    the HPA was able to successfully calculate a replica count from cpu resource utilization (percentage of request)
+  ScalingLimited  False   DesiredWithinRange  the desired count is within the acceptable range
+Events:
+  Type     Reason                        Age                From                       Message
+  ----     ------                        ----               ----                       -------
+  Warning  FailedGetResourceMetric       13m                horizontal-pod-autoscaler  failed to get cpu utilization: missing request for cpu in container vllm of Pod vllm-5dfd6888bd-pfpq6
+  Warning  FailedComputeMetricsReplicas  13m                horizontal-pod-autoscaler  invalid metrics (1 invalid out of 1), first error is: failed to get cpu resource metric value: failed to get cpu utilization: missing request for cpu in container vllm of Pod vllm-5dfd6888bd-pfpq6
+  Warning  FailedGetResourceMetric       12m (x9 over 14m)  horizontal-pod-autoscaler  failed to get cpu utilization: missing request for cpu in container vllm of Pod vllm-5dfd6888bd-2f5d9
+  Warning  FailedComputeMetricsReplicas  12m (x9 over 14m)  horizontal-pod-autoscaler  invalid metrics (1 invalid out of 1), first error is: failed to get cpu resource metric value: failed to get cpu utilization: missing request for cpu in container vllm of Pod vllm-5dfd6888bd-2f5d9
+  Normal   SuccessfulRescale             10m                horizontal-pod-autoscaler  New size: 2; reason: cpu resource utilization (percentage of request) above target
+  Normal   SuccessfulRescale             2s                 horizontal-pod-autoscaler  New size: 1; reason: All metrics below target

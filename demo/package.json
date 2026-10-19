@@ -1,0 +1,21 @@
+{
+    "name":  "kv-autoscaling-demo",
+    "private":  true,
+    "version":  "1.0.0",
+    "type":  "module",
+    "scripts":  {
+                    "data":  "node scripts/prepare-data.mjs",
+                    "dev":  "node scripts/run.mjs dev",
+                    "build":  "node scripts/run.mjs build",
+                    "preview":  "node scripts/run.mjs preview",
+                    "test":  "node scripts/run.mjs test"
+                },
+    "dependencies":  {
+                         "react":  "^19.2.0",
+                         "react-dom":  "^19.2.0"
+                     },
+    "devDependencies":  {
+                            "vite":  "^7.1.0",
+                            "@playwright/test":  "^1.56.0"
+                        }
+}
