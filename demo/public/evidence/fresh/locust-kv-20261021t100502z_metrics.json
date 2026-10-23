@@ -1,0 +1,8 @@
+{
+  "run": "locust-kv-20261021t100502z",
+  "start": "2026-10-21T10:05:46Z",
+  "end": "2026-10-21T10:14:02Z",
+  "prometheus_url": "http://127.0.0.1:19090",
+  "missing_metrics": [],
+  "samples": 943
+}
