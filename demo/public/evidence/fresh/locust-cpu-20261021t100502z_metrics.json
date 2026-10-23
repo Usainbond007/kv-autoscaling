@@ -1,0 +1,8 @@
+{
+  "run": "locust-cpu-20261021t100502z",
+  "start": "2026-10-21T10:21:29Z",
+  "end": "2026-10-21T10:29:45Z",
+  "prometheus_url": "http://127.0.0.1:19090",
+  "missing_metrics": [],
+  "samples": 965
+}

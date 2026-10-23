@@ -1,0 +1,102 @@
+2026-10-21T10:05:45.365132089Z {"desired": 1, "event": "waiting_for_healthy_targets", "healthy_targets": 2, "timestamp": "2026-10-21T10:05:45Z"}
+2026-10-21T10:05:50.386297298Z {"desired": 1, "event": "observed", "healthy_targets": 1, "kv_usage": 0.08223201174743022, "queue_p95_seconds": null, "running": 1.0, "signal_counts": {"kv_pressure": 0, "queue_p95": 0, "running": 0, "waiting": 0}, "timestamp": "2026-10-21T10:05:50Z", "waiting": 0.0}
+2026-10-21T10:05:55.410077018Z {"desired": 1, "event": "observed", "healthy_targets": 1, "kv_usage": 0.07782672540381796, "queue_p95_seconds": 0.285, "running": 1.0, "signal_counts": {"kv_pressure": 0, "queue_p95": 0, "running": 0, "waiting": 0}, "timestamp": "2026-10-21T10:05:55Z", "waiting": 0.0}
+2026-10-21T10:06:00.431709924Z {"desired": 1, "event": "observed", "healthy_targets": 1, "kv_usage": 0.07488986784140972, "queue_p95_seconds": 0.285, "running": 1.0, "signal_counts": {"kv_pressure": 0, "queue_p95": 0, "running": 0, "waiting": 0}, "timestamp": "2026-10-21T10:06:00Z", "waiting": 0.0}
+2026-10-21T10:06:05.455839598Z {"desired": 1, "event": "observed", "healthy_targets": 1, "kv_usage": 0.08516886930983847, "queue_p95_seconds": 0.285, "running": 1.0, "signal_counts": {"kv_pressure": 0, "queue_p95": 0, "running": 0, "waiting": 0}, "timestamp": "2026-10-21T10:06:05Z", "waiting": 0.0}
+2026-10-21T10:06:10.477006637Z {"desired": 1, "event": "observed", "healthy_targets": 1, "kv_usage": 0.08223201174743022, "queue_p95_seconds": 0.285, "running": 1.0, "signal_counts": {"kv_pressure": 0, "queue_p95": 0, "running": 0, "waiting": 0}, "timestamp": "2026-10-21T10:06:10Z", "waiting": 0.0}
+2026-10-21T10:06:15.502140676Z {"desired": 1, "event": "observed", "healthy_targets": 1, "kv_usage": 0.07635829662261384, "queue_p95_seconds": 0.285, "running": 1.0, "signal_counts": {"kv_pressure": 0, "queue_p95": 0, "running": 0, "waiting": 0}, "timestamp": "2026-10-21T10:06:15Z", "waiting": 0.0}
+2026-10-21T10:06:20.526560827Z {"desired": 1, "event": "observed", "healthy_targets": 1, "kv_usage": 0.0, "queue_p95_seconds": 0.285, "running": 0.0, "signal_counts": {"kv_pressure": 0, "queue_p95": 0, "running": 0, "waiting": 0}, "timestamp": "2026-10-21T10:06:20Z", "waiting": 0.0}
+2026-10-21T10:06:25.557558904Z {"desired": 1, "event": "observed", "healthy_targets": 1, "kv_usage": 0.08370044052863435, "queue_p95_seconds": 0.285, "running": 1.0, "signal_counts": {"kv_pressure": 0, "queue_p95": 0, "running": 0, "waiting": 0}, "timestamp": "2026-10-21T10:06:25Z", "waiting": 0.0}
+2026-10-21T10:06:30.583219127Z {"desired": 1, "event": "observed", "healthy_targets": 1, "kv_usage": 0.0807635829662261, "queue_p95_seconds": 0.285, "running": 1.0, "signal_counts": {"kv_pressure": 0, "queue_p95": 0, "running": 0, "waiting": 0}, "timestamp": "2026-10-21T10:06:30Z", "waiting": 0.0}
+2026-10-21T10:06:35.607830694Z {"desired": 1, "event": "observed", "healthy_targets": 1, "kv_usage": 0.07635829662261384, "queue_p95_seconds": 0.285, "running": 1.0, "signal_counts": {"kv_pressure": 0, "queue_p95": 0, "running": 0, "waiting": 0}, "timestamp": "2026-10-21T10:06:35Z", "waiting": 0.0}
+2026-10-21T10:06:40.628752405Z {"desired": 1, "event": "observed", "healthy_targets": 1, "kv_usage": 0.07635829662261384, "queue_p95_seconds": 0.285, "running": 1.0, "signal_counts": {"kv_pressure": 0, "queue_p95": 0, "running": 0, "waiting": 0}, "timestamp": "2026-10-21T10:06:40Z", "waiting": 0.0}
+2026-10-21T10:06:45.652328352Z {"desired": 1, "event": "observed", "healthy_targets": 1, "kv_usage": 0.08516886930983847, "queue_p95_seconds": 0.285, "running": 1.0, "signal_counts": {"kv_pressure": 0, "queue_p95": 0, "running": 0, "waiting": 0}, "timestamp": "2026-10-21T10:06:45Z", "waiting": 0.0}
+2026-10-21T10:06:50.675920855Z {"desired": 1, "event": "observed", "healthy_targets": 1, "kv_usage": 0.3964757709251101, "queue_p95_seconds": 0.285, "running": 5.0, "signal_counts": {"kv_pressure": 1, "queue_p95": 0, "running": 0, "waiting": 0}, "timestamp": "2026-10-21T10:06:50Z", "waiting": 0.0}
+2026-10-21T10:06:55.700701849Z {"desired": 1, "event": "observed", "healthy_targets": 1, "kv_usage": 0.4698972099853157, "queue_p95_seconds": 0.285, "running": 6.0, "signal_counts": {"kv_pressure": 2, "queue_p95": 0, "running": 1, "waiting": 0}, "timestamp": "2026-10-21T10:06:55Z", "waiting": 0.0}
+2026-10-21T10:06:55.700737075Z {"dry_run": false, "event": "scale", "reason": "kv_pressure", "replicas": 2, "signals": {"desired": 1, "healthy_targets": 1, "kv_usage": 0.4698972099853157, "queue_p95_seconds": 0.285, "running": 6.0, "waiting": 0.0}, "timestamp": "2026-10-21T10:06:55Z"}
+2026-10-21T10:07:00.721525958Z {"desired": 2, "event": "waiting_for_healthy_targets", "healthy_targets": 1, "timestamp": "2026-10-21T10:07:00Z"}
+2026-10-21T10:07:05.733803204Z {"desired": 2, "event": "waiting_for_healthy_targets", "healthy_targets": 1, "timestamp": "2026-10-21T10:07:05Z"}
+2026-10-21T10:07:10.747161345Z {"desired": 2, "event": "waiting_for_healthy_targets", "healthy_targets": 1, "timestamp": "2026-10-21T10:07:10Z"}
+2026-10-21T10:07:15.761063121Z {"desired": 2, "event": "waiting_for_healthy_targets", "healthy_targets": 1, "timestamp": "2026-10-21T10:07:15Z"}
+2026-10-21T10:07:20.779273147Z {"desired": 2, "event": "waiting_for_healthy_targets", "healthy_targets": 1, "timestamp": "2026-10-21T10:07:20Z"}
+2026-10-21T10:07:25.794040130Z {"desired": 2, "event": "waiting_for_healthy_targets", "healthy_targets": 1, "timestamp": "2026-10-21T10:07:25Z"}
+2026-10-21T10:07:30.809460748Z {"desired": 2, "event": "waiting_for_healthy_targets", "healthy_targets": 1, "timestamp": "2026-10-21T10:07:30Z"}
+2026-10-21T10:07:35.822718765Z {"desired": 2, "event": "waiting_for_healthy_targets", "healthy_targets": 1, "timestamp": "2026-10-21T10:07:35Z"}
+2026-10-21T10:07:40.834883637Z {"desired": 2, "event": "waiting_for_healthy_targets", "healthy_targets": 1, "timestamp": "2026-10-21T10:07:40Z"}
+2026-10-21T10:07:45.849714699Z {"desired": 2, "event": "waiting_for_healthy_targets", "healthy_targets": 1, "timestamp": "2026-10-21T10:07:45Z"}
+2026-10-21T10:07:50.864920583Z {"desired": 2, "event": "waiting_for_healthy_targets", "healthy_targets": 1, "timestamp": "2026-10-21T10:07:50Z"}
+2026-10-21T10:07:55.879087409Z {"desired": 2, "event": "waiting_for_healthy_targets", "healthy_targets": 1, "timestamp": "2026-10-21T10:07:55Z"}
+2026-10-21T10:08:00.892369922Z {"desired": 2, "event": "waiting_for_healthy_targets", "healthy_targets": 1, "timestamp": "2026-10-21T10:08:00Z"}
+2026-10-21T10:08:05.906965662Z {"desired": 2, "event": "waiting_for_healthy_targets", "healthy_targets": 1, "timestamp": "2026-10-21T10:08:05Z"}
+2026-10-21T10:08:10.918912902Z {"desired": 2, "event": "waiting_for_healthy_targets", "healthy_targets": 1, "timestamp": "2026-10-21T10:08:10Z"}
+2026-10-21T10:08:15.932632914Z {"desired": 2, "event": "waiting_for_healthy_targets", "healthy_targets": 1, "timestamp": "2026-10-21T10:08:15Z"}
+2026-10-21T10:08:20.944768602Z {"desired": 2, "event": "waiting_for_healthy_targets", "healthy_targets": 1, "timestamp": "2026-10-21T10:08:20Z"}
+2026-10-21T10:08:25.959421020Z {"desired": 2, "event": "waiting_for_healthy_targets", "healthy_targets": 1, "timestamp": "2026-10-21T10:08:25Z"}
+2026-10-21T10:08:30.972167202Z {"desired": 2, "event": "waiting_for_healthy_targets", "healthy_targets": 1, "timestamp": "2026-10-21T10:08:30Z"}
+2026-10-21T10:08:35.986647417Z {"desired": 2, "event": "waiting_for_healthy_targets", "healthy_targets": 1, "timestamp": "2026-10-21T10:08:35Z"}
+2026-10-21T10:08:40.998653503Z {"desired": 2, "event": "waiting_for_healthy_targets", "healthy_targets": 1, "timestamp": "2026-10-21T10:08:40Z"}
+2026-10-21T10:08:46.011210286Z {"desired": 2, "event": "waiting_for_healthy_targets", "healthy_targets": 1, "timestamp": "2026-10-21T10:08:46Z"}
+2026-10-21T10:08:51.023785482Z {"desired": 2, "event": "waiting_for_healthy_targets", "healthy_targets": 1, "timestamp": "2026-10-21T10:08:51Z"}
+2026-10-21T10:08:56.037395261Z {"desired": 2, "event": "waiting_for_healthy_targets", "healthy_targets": 1, "timestamp": "2026-10-21T10:08:56Z"}
+2026-10-21T10:09:01.051369820Z {"desired": 2, "event": "waiting_for_healthy_targets", "healthy_targets": 1, "timestamp": "2026-10-21T10:09:01Z"}
+2026-10-21T10:09:06.063294615Z {"desired": 2, "event": "waiting_for_healthy_targets", "healthy_targets": 1, "timestamp": "2026-10-21T10:09:06Z"}
+2026-10-21T10:09:11.077518202Z {"desired": 2, "event": "waiting_for_healthy_targets", "healthy_targets": 1, "timestamp": "2026-10-21T10:09:11Z"}
+2026-10-21T10:09:16.089549933Z {"desired": 2, "event": "waiting_for_healthy_targets", "healthy_targets": 1, "timestamp": "2026-10-21T10:09:16Z"}
+2026-10-21T10:09:21.102934426Z {"desired": 2, "event": "waiting_for_healthy_targets", "healthy_targets": 1, "timestamp": "2026-10-21T10:09:21Z"}
+2026-10-21T10:09:26.118331134Z {"desired": 2, "event": "waiting_for_healthy_targets", "healthy_targets": 1, "timestamp": "2026-10-21T10:09:26Z"}
+2026-10-21T10:09:31.131219691Z {"desired": 2, "event": "waiting_for_healthy_targets", "healthy_targets": 1, "timestamp": "2026-10-21T10:09:31Z"}
+2026-10-21T10:09:36.145934089Z {"desired": 2, "event": "waiting_for_healthy_targets", "healthy_targets": 1, "timestamp": "2026-10-21T10:09:36Z"}
+2026-10-21T10:09:41.157839684Z {"desired": 2, "event": "waiting_for_healthy_targets", "healthy_targets": 1, "timestamp": "2026-10-21T10:09:41Z"}
+2026-10-21T10:09:46.171317305Z {"desired": 2, "event": "waiting_for_healthy_targets", "healthy_targets": 1, "timestamp": "2026-10-21T10:09:46Z"}
+2026-10-21T10:09:51.183484891Z {"desired": 2, "event": "waiting_for_healthy_targets", "healthy_targets": 1, "timestamp": "2026-10-21T10:09:51Z"}
+2026-10-21T10:09:56.196883544Z {"desired": 2, "event": "waiting_for_healthy_targets", "healthy_targets": 1, "timestamp": "2026-10-21T10:09:56Z"}
+2026-10-21T10:10:01.211045683Z {"desired": 2, "event": "waiting_for_healthy_targets", "healthy_targets": 1, "timestamp": "2026-10-21T10:10:01Z"}
+2026-10-21T10:10:06.223067845Z {"desired": 2, "event": "waiting_for_healthy_targets", "healthy_targets": 1, "timestamp": "2026-10-21T10:10:06Z"}
+2026-10-21T10:10:11.236864113Z {"desired": 2, "event": "waiting_for_healthy_targets", "healthy_targets": 1, "timestamp": "2026-10-21T10:10:11Z"}
+2026-10-21T10:10:16.248904243Z {"desired": 2, "event": "waiting_for_healthy_targets", "healthy_targets": 1, "timestamp": "2026-10-21T10:10:16Z"}
+2026-10-21T10:10:21.260900509Z {"desired": 2, "event": "waiting_for_healthy_targets", "healthy_targets": 1, "timestamp": "2026-10-21T10:10:21Z"}
+2026-10-21T10:10:26.274918939Z {"desired": 2, "event": "waiting_for_healthy_targets", "healthy_targets": 1, "timestamp": "2026-10-21T10:10:26Z"}
+2026-10-21T10:10:31.287042096Z {"desired": 2, "event": "waiting_for_healthy_targets", "healthy_targets": 1, "timestamp": "2026-10-21T10:10:31Z"}
+2026-10-21T10:10:36.299490759Z {"desired": 2, "event": "waiting_for_healthy_targets", "healthy_targets": 1, "timestamp": "2026-10-21T10:10:36Z"}
+2026-10-21T10:10:41.313740059Z {"desired": 2, "event": "waiting_for_healthy_targets", "healthy_targets": 1, "timestamp": "2026-10-21T10:10:41Z"}
+2026-10-21T10:10:46.328604338Z {"desired": 2, "event": "waiting_for_healthy_targets", "healthy_targets": 1, "timestamp": "2026-10-21T10:10:46Z"}
+2026-10-21T10:10:51.340922877Z {"desired": 2, "event": "waiting_for_healthy_targets", "healthy_targets": 1, "timestamp": "2026-10-21T10:10:51Z"}
+2026-10-21T10:10:56.357732580Z {"desired": 2, "event": "waiting_for_healthy_targets", "healthy_targets": 1, "timestamp": "2026-10-21T10:10:56Z"}
+2026-10-21T10:11:01.370321015Z {"desired": 2, "event": "waiting_for_healthy_targets", "healthy_targets": 1, "timestamp": "2026-10-21T10:11:01Z"}
+2026-10-21T10:11:06.383681213Z {"desired": 2, "event": "waiting_for_healthy_targets", "healthy_targets": 1, "timestamp": "2026-10-21T10:11:06Z"}
+2026-10-21T10:11:11.405049986Z {"desired": 2, "event": "waiting_for_healthy_targets", "healthy_targets": 1, "timestamp": "2026-10-21T10:11:11Z"}
+2026-10-21T10:11:16.418039631Z {"desired": 2, "event": "waiting_for_healthy_targets", "healthy_targets": 1, "timestamp": "2026-10-21T10:11:16Z"}
+2026-10-21T10:11:21.431174868Z {"desired": 2, "event": "waiting_for_healthy_targets", "healthy_targets": 1, "timestamp": "2026-10-21T10:11:21Z"}
+2026-10-21T10:11:26.445201146Z {"desired": 2, "event": "waiting_for_healthy_targets", "healthy_targets": 1, "timestamp": "2026-10-21T10:11:26Z"}
+2026-10-21T10:11:31.462451567Z {"desired": 2, "event": "waiting_for_healthy_targets", "healthy_targets": 1, "timestamp": "2026-10-21T10:11:31Z"}
+2026-10-21T10:11:36.476253242Z {"desired": 2, "event": "waiting_for_healthy_targets", "healthy_targets": 1, "timestamp": "2026-10-21T10:11:36Z"}
+2026-10-21T10:11:41.487580965Z {"desired": 2, "event": "waiting_for_healthy_targets", "healthy_targets": 1, "timestamp": "2026-10-21T10:11:41Z"}
+2026-10-21T10:11:46.500328072Z {"desired": 2, "event": "waiting_for_healthy_targets", "healthy_targets": 1, "timestamp": "2026-10-21T10:11:46Z"}
+2026-10-21T10:11:51.515574909Z {"desired": 2, "event": "waiting_for_healthy_targets", "healthy_targets": 1, "timestamp": "2026-10-21T10:11:51Z"}
+2026-10-21T10:11:56.527299302Z {"desired": 2, "event": "waiting_for_healthy_targets", "healthy_targets": 1, "timestamp": "2026-10-21T10:11:56Z"}
+2026-10-21T10:12:01.537040824Z {"desired": 2, "event": "waiting_for_healthy_targets", "healthy_targets": 1, "timestamp": "2026-10-21T10:12:01Z"}
+2026-10-21T10:12:06.550584483Z {"desired": 2, "event": "waiting_for_healthy_targets", "healthy_targets": 1, "timestamp": "2026-10-21T10:12:06Z"}
+2026-10-21T10:12:11.569209355Z {"desired": 2, "event": "waiting_for_healthy_targets", "healthy_targets": 1, "timestamp": "2026-10-21T10:12:11Z"}
+2026-10-21T10:12:16.585380489Z {"desired": 2, "event": "waiting_for_healthy_targets", "healthy_targets": 1, "timestamp": "2026-10-21T10:12:16Z"}
+2026-10-21T10:12:21.599299178Z {"desired": 2, "event": "waiting_for_healthy_targets", "healthy_targets": 1, "timestamp": "2026-10-21T10:12:21Z"}
+2026-10-21T10:12:26.611984125Z {"desired": 2, "event": "waiting_for_healthy_targets", "healthy_targets": 1, "timestamp": "2026-10-21T10:12:26Z"}
+2026-10-21T10:12:31.624340329Z {"desired": 2, "event": "waiting_for_healthy_targets", "healthy_targets": 1, "timestamp": "2026-10-21T10:12:31Z"}
+2026-10-21T10:12:36.636209751Z {"desired": 2, "event": "waiting_for_healthy_targets", "healthy_targets": 1, "timestamp": "2026-10-21T10:12:36Z"}
+2026-10-21T10:12:41.647109950Z {"desired": 2, "event": "waiting_for_healthy_targets", "healthy_targets": 1, "timestamp": "2026-10-21T10:12:41Z"}
+2026-10-21T10:12:46.662536304Z {"desired": 2, "event": "waiting_for_healthy_targets", "healthy_targets": 1, "timestamp": "2026-10-21T10:12:46Z"}
+2026-10-21T10:12:51.674806125Z {"desired": 2, "event": "waiting_for_healthy_targets", "healthy_targets": 1, "timestamp": "2026-10-21T10:12:51Z"}
+2026-10-21T10:12:56.687326745Z {"desired": 2, "event": "waiting_for_healthy_targets", "healthy_targets": 1, "timestamp": "2026-10-21T10:12:56Z"}
+2026-10-21T10:13:01.699954143Z {"desired": 2, "event": "waiting_for_healthy_targets", "healthy_targets": 1, "timestamp": "2026-10-21T10:13:01Z"}
+2026-10-21T10:13:06.715053131Z {"desired": 2, "event": "waiting_for_healthy_targets", "healthy_targets": 1, "timestamp": "2026-10-21T10:13:06Z"}
+2026-10-21T10:13:11.727881121Z {"desired": 2, "event": "waiting_for_healthy_targets", "healthy_targets": 1, "timestamp": "2026-10-21T10:13:11Z"}
+2026-10-21T10:13:16.740675010Z {"desired": 2, "event": "waiting_for_healthy_targets", "healthy_targets": 1, "timestamp": "2026-10-21T10:13:16Z"}
+2026-10-21T10:13:21.764328747Z {"desired": 2, "event": "observed", "healthy_targets": 2, "kv_usage": 0.0, "queue_p95_seconds": 0.285, "running": 0.0, "signal_counts": {"kv_pressure": 0, "queue_p95": 0, "running": 0, "waiting": 0}, "timestamp": "2026-10-21T10:13:21Z", "waiting": 0.0}
+2026-10-21T10:13:26.791638608Z {"desired": 2, "event": "observed", "healthy_targets": 2, "kv_usage": 0.0, "queue_p95_seconds": 0.285, "running": 0.0, "signal_counts": {"kv_pressure": 0, "queue_p95": 0, "running": 0, "waiting": 0}, "timestamp": "2026-10-21T10:13:26Z", "waiting": 0.0}
+2026-10-21T10:13:31.815110477Z {"desired": 2, "event": "observed", "healthy_targets": 2, "kv_usage": 0.0, "queue_p95_seconds": 0.285, "running": 0.0, "signal_counts": {"kv_pressure": 0, "queue_p95": 0, "running": 0, "waiting": 0}, "timestamp": "2026-10-21T10:13:31Z", "waiting": 0.0}
+2026-10-21T10:13:36.841135261Z {"desired": 2, "event": "observed", "healthy_targets": 2, "kv_usage": 0.0, "queue_p95_seconds": 0.285, "running": 0.0, "signal_counts": {"kv_pressure": 0, "queue_p95": 0, "running": 0, "waiting": 0}, "timestamp": "2026-10-21T10:13:36Z", "waiting": 0.0}
+2026-10-21T10:13:41.865282556Z {"desired": 2, "event": "observed", "healthy_targets": 2, "kv_usage": 0.0, "queue_p95_seconds": 0.285, "running": 0.0, "signal_counts": {"kv_pressure": 0, "queue_p95": 0, "running": 0, "waiting": 0}, "timestamp": "2026-10-21T10:13:41Z", "waiting": 0.0}
+2026-10-21T10:13:46.890073695Z {"desired": 2, "event": "observed", "healthy_targets": 2, "kv_usage": 0.0, "queue_p95_seconds": null, "running": 0.0, "signal_counts": {"kv_pressure": 0, "queue_p95": 0, "running": 0, "waiting": 0}, "timestamp": "2026-10-21T10:13:46Z", "waiting": 0.0}
+2026-10-21T10:13:51.913442144Z {"desired": 2, "event": "observed", "healthy_targets": 2, "kv_usage": 0.0, "queue_p95_seconds": null, "running": 0.0, "signal_counts": {"kv_pressure": 0, "queue_p95": 0, "running": 0, "waiting": 0}, "timestamp": "2026-10-21T10:13:51Z", "waiting": 0.0}
+2026-10-21T10:13:56.940118559Z {"desired": 2, "event": "observed", "healthy_targets": 2, "kv_usage": 0.0, "queue_p95_seconds": null, "running": 0.0, "signal_counts": {"kv_pressure": 0, "queue_p95": 0, "running": 0, "waiting": 0}, "timestamp": "2026-10-21T10:13:56Z", "waiting": 0.0}
+2026-10-21T10:14:01.963781081Z {"desired": 2, "event": "observed", "healthy_targets": 2, "kv_usage": 0.0, "queue_p95_seconds": null, "running": 0.0, "signal_counts": {"kv_pressure": 0, "queue_p95": 0, "running": 0, "waiting": 0}, "timestamp": "2026-10-21T10:14:01Z", "waiting": 0.0}
+2026-10-21T10:14:06.987219116Z {"desired": 2, "event": "observed", "healthy_targets": 2, "kv_usage": 0.0, "queue_p95_seconds": null, "running": 0.0, "signal_counts": {"kv_pressure": 0, "queue_p95": 0, "running": 0, "waiting": 0}, "timestamp": "2026-10-21T10:14:06Z", "waiting": 0.0}

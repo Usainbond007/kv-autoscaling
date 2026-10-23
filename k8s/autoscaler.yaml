@@ -48,6 +48,28 @@ spec:
           env:
             - name: DRY_RUN
               value: "false"
+            - name: UP_QUEUE_P95_SECONDS
+              value: "1.0"
+            - name: UP_KV
+              value: "0.30"
+            - name: UP_WAITING
+              value: "1"
+            - name: UP_RUNNING
+              value: "6"
+            - name: UP_CONSECUTIVE_SAMPLES
+              value: "2"
+            - name: QUERY_WINDOW_SECONDS
+              value: "30"
+            - name: DOWN_QUEUE_P95_SECONDS
+              value: "0.20"
+            - name: DOWN_KV
+              value: "0.15"
+            - name: DOWN_RUNNING
+              value: "1"
+            - name: DOWN_SECONDS
+              value: "120"
+            - name: CHECK_SECONDS
+              value: "5"
           volumeMounts:
             - name: code
               mountPath: /app

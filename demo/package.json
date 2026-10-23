@@ -4,11 +4,11 @@
     "version":  "1.0.0",
     "type":  "module",
     "scripts":  {
-                    "data":  "node scripts/prepare-data.mjs",
-                    "dev":  "node scripts/run.mjs dev",
-                    "build":  "node scripts/run.mjs build",
-                    "preview":  "node scripts/run.mjs preview",
-                    "test":  "node scripts/run.mjs test"
+                    "data":  "node -e \"import(require('node:url').pathToFileURL(require('node:path').join(require('node:path').dirname(process.env.npm_package_json), 'scripts/run.mjs')).href)\"",
+                    "dev":  "node -e \"import(require('node:url').pathToFileURL(require('node:path').join(require('node:path').dirname(process.env.npm_package_json), 'scripts/run.mjs')).href)\"",
+                    "build":  "node -e \"import(require('node:url').pathToFileURL(require('node:path').join(require('node:path').dirname(process.env.npm_package_json), 'scripts/run.mjs')).href)\"",
+                    "preview":  "node -e \"import(require('node:url').pathToFileURL(require('node:path').join(require('node:path').dirname(process.env.npm_package_json), 'scripts/run.mjs')).href)\"",
+                    "test":  "node -e \"import(require('node:url').pathToFileURL(require('node:path').join(require('node:path').dirname(process.env.npm_package_json), 'scripts/run.mjs')).href)\""
                 },
     "dependencies":  {
                          "react":  "^19.2.0",

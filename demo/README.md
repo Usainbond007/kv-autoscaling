@@ -1,37 +1,41 @@
 # Recorded autoscaling viewer
 
-Requires Node.js 22.12+ (or 24) and npm. From `demo/`:
+The React demo opens with the saved K3s comparison from 21 October 2026. It needs Node.js 22.12 or newer and npm.
+
+From an Ubuntu/WSL terminal:
 
 ```sh
+cd ~/kv-autoscaling/demo
 npm install
 npm run dev
 ```
 
-Open http://127.0.0.1:5173. Production: `npm run build`, then `npm run preview`.
-Servers bind to loopback. No cluster, GPU, credentials, or Prometheus is needed for saved results.
+On this machine npm uses Windows Node. The launcher handles the WSL path automatically, builds the saved demo, and serves it at http://127.0.0.1:5173. Keep that terminal open and open the URL in a Windows browser. The CMD warning about UNC paths is harmless. The viewer needs no live cluster connection. With Linux Node installed in Ubuntu, the same commands run Vite directly.
 
-## Data
+For a separate production build, run `npm run build`.
 
-`npm run data` reads the four comparison Locust logs and four Prometheus CSVs in `../results/`, verifies final summaries, generates `src/data.json`, and copies evidence into `public/evidence/`. These generated assets are included for immediate rendering. Regenerate after intentional evidence changes.
+## Data and charts
 
-Charts follow the original plotting scripts: maximum observed pod KV percentage; summed running requests and successful-completion rates; aggregate healthy scrape targets. Original timestamps are retained and aligned to each export's start. The original 5-second grid covers 0–480 seconds. Missing/nonfinite values remain null and break lines; aggregates include observed instances only. Healthy targets do not establish Kubernetes Ready timestamps. Phase bands come from the workload definition. Use the shared keyboard-accessible slider for exact values and UTC times.
+`npm run data` reads the newest complete `results/fresh-*/` directory with `run-windows.json`. It verifies both final Locust summaries, bundles the Prometheus CSV observations into `src/data.json`, and copies the logs, CSVs, controller log, HPA snapshot, and run windows into `public/evidence/fresh/`. The verified run is `fresh-20261021t100502z`: KV-aware 800 requests / 0 failures, mean 2.983 s, median 3.1 s, p95 3.4 s; CPU HPA 666 / 1, mean 3.549 s, median 3.1 s, p95 3.4 s.
 
-Controller logs lack timestamps; the HPA file is a final snapshot. Neither supplies exact decision times. Two trials on one physical 8 GiB GPU do not establish a universal winner.
+The chart grid uses actual UTC run windows and five-second Prometheus samples. Missing and nonfinite samples break lines. Per-instance values are aggregated only where observed. The first KV health sample shows two targets before the one-target state; the later one-to-two transition is used for target timing. Healthy Prometheus targets are not Kubernetes Ready timestamps. The KV scale decision comes from its timestamped controller log. The CPU HPA file is a final snapshot and cannot give an exact CPU decision time.
 
-## Fresh comparison (optional)
+Queue p95 is 0.285 s for both policies wherever finite; this histogram did not distinguish them. The table uses measured Locust mean, median, and p95. The charts include rolling Prometheus end-to-end p95, which has a different aggregation and should not be read as the overall Locust p95.
 
-Run `bash demo/public/fresh-run.sh` from the repository root in Ubuntu. Requires configured local K3s, kubectl access, NVIDIA runtime and two shared GPU slots, Prometheus scraping individual pods, metrics-server, model/image access, and free GPU memory. The script switches controllers and changes the local experiment Deployment. Duration: 16+ minutes plus startup/readiness.
+## Fresh comparison
 
-The script prints status/errors and saves logs to a new timestamped results directory. It stops on errors; request failures can cause Locust to return nonzero even after the workload finishes. Inspect saved logs before retrying. Jobs remain for inspection; CPU HPA remains active on successful completion. Cluster/plugin provisioning is not included.
+From the repository root in Ubuntu:
 
-There is no execution backend: the browser cannot start jobs or monitor status. Fresh metrics are not imported automatically. Use a separate copy of `analysis/export_metrics.py` with actual new start/end windows and distinct output names; the original exporter hard-codes historical windows. Existing experiment files and saved evidence remain intact.
+```sh
+KUBECONFIG="$HOME/.kube/k3s.yaml" bash demo/public/fresh-run.sh
+```
+
+The workflow requires local K3s, working `kubectl` access, Python 3, curl, metrics-server, Prometheus with vLLM queue and end-to-end latency histograms, NVIDIA container support, model and image access, and enough GPU memory. The device plugin advertises two shared slots, but both time-sliced pods use one physical 8 GiB GPU. Allow at least 16 minutes plus model startup and readiness.
+
+The script uses a loopback Prometheus port-forward unless `PROMETHEUS_URL` is set. It saves a new `results/fresh-<timestamp>/` directory with logs, run windows, Prometheus CSVs, and decision evidence. A full Locust workload that records request failures remains valid comparison data. Infrastructure or early workload failures stop the script. After a completed run, CPU HPA remains active and the KV controller is paused.
+
+The browser cannot start or monitor K3s jobs. Review a new run's summaries, then run `npm run data` and `npm run build` to bundle it into the viewer. The data script checks the currently reviewed summary values; update that assertion only after reviewing a new pair.
 
 ## Checks
 
-`npm run build` validates summaries and builds. `npm run test` checks both trials, sample controls, source links, responsive layout and browser errors against a running dev server.
-
-For Windows access through a WSL share, build with a mapped drive. If filesystem watching fails, serve the built app with 
-ode scripts/serve.mjs at http://127.0.0.1:5173. Browser tests require 
-px playwright install chromium.
-
-Windows/WSL fallback: build using a mapped drive, then run `node scripts/serve.mjs` to serve the production files at http://127.0.0.1:5173 if development file watching is unavailable. Browser tests require `npx playwright install chromium`.
+`npm run build` verifies summaries and builds the site. `npm run test` checks evidence links, the interactive sample slider, desktop and mobile layout, touch targets, and browser errors against a running development server.
